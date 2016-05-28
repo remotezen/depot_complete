@@ -1,0 +1,17 @@
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+$store-h1-color: #226;
+$store-h3-color: #277;
+$store-h1-border: #77d;
+$line-even: #e0f8f8;
+$line-odd: #f8b0f8;
+$sans-font: arial;
+$price-color: #44a;
+@mixin img-padding{
+	width: 80px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	position: absolute;
+
+}

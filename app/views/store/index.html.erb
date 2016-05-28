@@ -1,0 +1,29 @@
+		<% if notice %>
+			<p id="notice"><%= notice %></p>
+		<% end %>
+		<h1>Your Pragmatic Catalog</h1>
+		<% cache ['store', Product.latest] do %>
+		<% @products.each do |p| %>
+		<% cache ['entry'], p do %>
+		<div class="row entry">
+			<div class="col-md-2 store-image col-md-push-2 ">
+					<%= image_tag p.image_url %>
+			</div>
+			<div class="col-md-6 text-left col-md-push-2">
+					<br>
+				<h3>
+					<%= p.title %>
+				</h3>
+				<p><%= sanitize p.description %></p>
+				<div class="price_line">
+					<span class="price">
+						<%#baked in rails helper %>
+						<%= number_to_currency(p.price) %>
+					</span>
+				</div>
+			</div>
+			</div>
+			<% end %>
+		<% end %>
+	<%end%>
+
