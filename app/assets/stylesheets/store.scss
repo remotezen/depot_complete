@@ -2,41 +2,44 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "variables";
+@import "mixins";
+#cart{
+	margin-top:$cart_top;
+	table{
+		@include cart_table
+	}
+}
+
+.sidebar{
+	font-size: $cart_fontsize;
+	color:$cart_fontcolor;
+}
+
 .store-image{
 	margin-top: 2em;
 }
-
-.store{
-	h1{
-		margin: 0;
-		padding-bottom:0.5em;
-		font: 150% sans-serif;
-		color: $store-h1-color;
-		border-bottom: 2px dotted $store-h1-border;
-	}
-	.entry{
-		overflow: auto;
-		margin-top: 1em;
-		border-bottom: 1px dotted $store-h1-border;
-		img{
-			@include img-padding;
-		}
-		
-		h3 {
-			font-size: 120%;
-			font-family: $sans-font;
-			margin-top:0;
-			margin-bottom: 2px;
-			color: $store-h3-color;
-		}
-		p, div.price_line{
-			margin-top: 0.5em;
-			margin-bottom: 0.8em;
-		}
-		.price{
-			color: $price-color; 
-			font-weight: bold;
-		}
-	}
-
+.store_item{
+	list-style-type:none;
 }
+h1.store_header{
+	font-size:200%;
+}
+.item_description{
+	font-size: 1.1em;
+	color:#111;
+	margin-bottom:1.5em;
+	border-bottom: dotted 1px #000;
+	padding-bottom: .5em;
+	
+}
+.btn-clear{
+	background:$btn-clear;
+}
+.btn-decrement{
+	background: $btn-decrement;
+}
+
+.btn-add{
+	background: $btn-add;
+}
+

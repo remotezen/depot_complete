@@ -1,0 +1,15 @@
+ <li class="store_image">
+	 <p>
+		 <h4>
+				<%= product.title %>
+		 </h4>
+	 </p>
+		<%= image_tag(product.image_url, size: "80x80") %>
+ </li>
+ <li class="item_description">
+		<%= sanitize product.description %>
+			<%= number_to_currency(product.price) %>
+			<%= button_to 'Add to Cart', line_items_path(product_id: product), 
+				class: "btn btn-success", remote:true %>
+ </li>
+

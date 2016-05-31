@@ -1,0 +1,13 @@
+<%= form_for(@order) do |f| %>
+	<%= render 'shared/error_messages', object: f.object %>
+	<%= f.label :name %>
+	<%= f.text_field :name, class: 'form-control'  %>
+	<%= f.label :address %>
+	<%= f.text_area :address, class:'form-control' %>
+	<%= f.label :email %>
+	<%= f.text_field :email, class: 'form-control' %>
+	<%= f.label :pay_type %>
+	<%= f.select :pay_type, Order:: PAYMENT_TYPES, 
+		prompt: 'Select a payment method', class: 'form-control'%>
+	<%= f.submit  class: 'form-controller'%>
+<% end %>

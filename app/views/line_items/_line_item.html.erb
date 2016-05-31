@@ -1,0 +1,23 @@
+<% if line_item == @current_item %>
+<tr id="current_item">
+<% else %>		
+<tr>
+<% end %>
+	<td>
+		<%=line_item.quantity %> &times <%= line_item.product.title %> 
+	</td>
+	<td class="items_price"><%= number_to_currency(line_item.total_price) %></td>
+	<td>
+		<p>
+			<%= button_to "Remove Item", line_item, method: :delete, 
+			class: "btn-sm btn-warning",	data: "Are you sure?"%>
+		</p>
+		<p>
+			<%= button_to "add another", line_items_path(product_id: line_item.product), class: "btn-sm btn-success", data: "add another item?"%>
+		</p>
+		<p>
+			<%= button_to "remove one", decrement_line_item_path(id: line_item),
+		class:"btn-sm btn-info"%>
+		</p>
+	<td>
+</tr>

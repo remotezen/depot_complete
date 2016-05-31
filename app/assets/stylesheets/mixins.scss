@@ -1,0 +1,16 @@
+@import "variables";
+@mixin img-padding{
+	width: 80px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	position: absolute;
+
+}
+@mixin cart_tableborder{
+	border:dotted 1px #AAA;
+}
+@mixin cart_table{
+	padding:$cart_tablepadding;
+	@include cart_tableborder;
+	background:$cart_background
+}
