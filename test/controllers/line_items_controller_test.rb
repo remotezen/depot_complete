@@ -2,9 +2,9 @@ require 'test_helper'
 
 class LineItemsControllerTest < ActionController::TestCase
   setup do
-    @line_item = line_items(:line_item_1)
-    @cart = carts(:cart_1)
-    @product = products(:product_1)
+    @line_item = line_items(:one)
+    @cart = carts(:one)
+    @product = products(:ruby)
 
   end
 

@@ -4,12 +4,13 @@ class OrdersControllerTest < ActionController::TestCase
   setup do
     @order = orders(:one)
   end
+  
   test "should create order" do
     assert_difference('Order.count') do
-      post :create, order: {address: @order.address, email: @order.email,
-      name: @order.name, pay_type: @order.pay_type}
+      post :create, order: { address: @order.address, email: @order.email, name: @order.name, pay_type: @order.pay_type }
     end
-    assert_redirected_to store_path
+
+    assert_redirected_to store_url 
   end
   
   test "require an item in the cart" do
@@ -34,13 +35,6 @@ class OrdersControllerTest < ActionController::TestCase
   end
 
 
-  test "should create order" do
-    assert_difference('Order.count') do
-      post :create, order: { address: @order.address, email: @order.email, name: @order.name, pay_type: @order.pay_type }
-    end
-
-    assert_redirected_to order_path(assigns(:order))
-  end
 
   test "should show order" do
     get :show, id: @order
