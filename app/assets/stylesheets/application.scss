@@ -5,3 +5,14 @@
 @import "carts";
 @import 'variables';
 @import 'mixins';
+
+.notice{
+	margin-top:1em;
+	background:#Efe;
+	padding:8px;
+	border:solid;
+	color:#112;
+	border-radius: 8px;
+
+
+}
