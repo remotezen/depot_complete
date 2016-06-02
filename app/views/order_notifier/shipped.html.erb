@@ -1,0 +1,15 @@
+<h3>Store order shipped</h3>
+<p>
+	Just letting you know that your order in on the way
+</p>
+
+<table>
+	<tr>
+		<th colspan="2"><Qty></Qty></th>
+	<th>
+		Description
+</th>
+	</tr>
+	<%= render @order.line_items %>
+</table>
+
