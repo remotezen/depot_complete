@@ -19,6 +19,14 @@ class ActiveSupport::TestCase
   include AroundEachTest
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
+  session[:user_id] = users(user).id
+  def logout 
+    session.delete :user_id
+  end
+  def setup 
+    login_as :one if defined? session
+    
+  end
 
   # Add more helper methods to be used by all tests here...
 end

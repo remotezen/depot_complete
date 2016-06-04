@@ -3,6 +3,7 @@
   before_action :set_line_item, only: [:show, :edit, :update, :destroy, :decrement]
   before_action :set_cart, only: [:create]
   after_action :reset_counter, only: [:create]
+  skip_before_action :authorize
 
   # GET /line_items
   # GET /line_items.json

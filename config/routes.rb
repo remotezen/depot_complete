@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  get 'admin' => 'admin#index'
+
+
+
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+  post 'users/:id/edit' => 'users#edit'
+  
+  get 'sessions/create'
+  get 'sessions/destroy'
   resources :users
   resources :orders
   resources :line_items
@@ -20,6 +33,11 @@ Rails.application.routes.draw do
       post 'decrement'
     end
   end
+    resources :users do
+      member do
+        post 'confirm_password'
+      end
+    end
   resources :products do
     member do
       get 'who_bought'

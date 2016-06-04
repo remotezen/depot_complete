@@ -20,6 +20,10 @@
 						<%= render @cart  %>
 					<% end %>
 				<% end %>
+				<br>
+				<% if session[:user_id] %>
+					<%= render 'layouts/admin_menu' %>
+				<% end %>
 			</div>
 			<div class="col-md-5">
 				<%= yield %>

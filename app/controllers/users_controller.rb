@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.order(:name)
   end
 
   # GET /users/1
@@ -19,6 +19,16 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    if session[:confirmed].nil?
+      @user = User.find(session[:user_id])
+     render 'password_check' 
+    elsif session[:confirmed] 
+      session[:confirmed] = nil
+      render 'edit'
+    else
+      session[:user_id] = nil
+      redirect_to login_path
+    end
   end
 
   # POST /users
@@ -28,7 +38,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User #{@user.name} was successfully created.' }
+        format.html { redirect_to users_path, notice: "User #{@user.name} was successfully created." }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -42,7 +52,8 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to users_url,
+                      notice: "User #{@user.name} was updated!!!" }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -54,15 +65,34 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    @user.destroy
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
+    begin
+      @user.destroy
+      flash[:notice] =  "User #{@user.name} deleted"
+    rescue StandardError => e
+      flash[:notice] = e.message
     end
+  
+    respond_to do |format|
+      format.html {redirect_to users_url}
+      format.json {head :no_content}
+    end
+  end
+  def confirm_password 
+    @user = User.find(session[:user_id])
+    if @user and @user.authenticate(params[:password])
+      session[:confirmed] = 'confirmed'
+      render 'edit' 
+    else
+      session[:user_id] = nil
+      redirect_to login_path, status: 307
+    end
+    
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    
+    
     def set_user
       @user = User.find(params[:id])
     end

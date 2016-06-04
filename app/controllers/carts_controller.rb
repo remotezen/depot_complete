@@ -2,6 +2,7 @@ class CartsController < ApplicationController
 
   include CurrentCart
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authorize
 rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
 
   # GET /carts
