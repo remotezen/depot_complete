@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
+group :production do
+  gem 'mysql2'
+end
 
 gem 'database_cleaner', group: 'test'
 gem 'minitest-around', group: 'test'

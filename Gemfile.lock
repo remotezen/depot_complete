@@ -89,6 +89,7 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     multi_json (1.12.1)
+    mysql2 (0.4.4)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     pry (0.10.3)
@@ -176,6 +177,7 @@ DEPENDENCIES
   jquery-ui-rails
   minitest-around
   minitest-reporters
+  mysql2
   pry
   puma
   rails (= 4.2.6)
