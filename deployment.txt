@@ -1,0 +1,19 @@
+apachectl -V | grep HTTPD_ROOT
+apachectl -V | grep SERVER_CONFIG_FILE
+/private/etc/apache2/httpd.conf #apache configfile
+mysqlstart
+mysqlstop
+mysql -u root
+################################mysql stuff
+CREATE DATABASE depot_product DEFAULT CHARACTER SET utf8;
+ GRANT ALL PRIVILEGES ON depot_production.* 
+TO '_www'@'localhost' IDENTIFIED BY 'password';
+
+rake db:setup RAILS_ENV="production"
+bundle package ##############Gems in vendor cache
+git add Gemfile.local vendor/cache
+
+#####capistrano
+cap install
+bundle exec cap install
+rake secret #Create a secret key

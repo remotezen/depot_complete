@@ -1,0 +1,42 @@
+I, [2016-06-04T11:37:38.663613 #13324]  INFO -- : Refreshing Gem list
+F, [2016-06-04T11:37:40.205563 #13324] FATAL -- : error adding listener addr=/Users/fredhudson/Programming/Projects/Rails/depot/depot_deployment/depot_complete/shared/sockets/unicorn.sock
+ArgumentError: too long unix socket path (110bytes given but 104bytes max)
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/socket_helper.rb:122:in `initialize'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/socket_helper.rb:122:in `new'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/socket_helper.rb:122:in `bind_listen'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:231:in `listen'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:808:in `block in bind_new_listeners!'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:808:in `each'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:808:in `bind_new_listeners!'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:130:in `start'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/bin/unicorn:126:in `<top (required)>'
+  /Users/fredhudson/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /Users/fredhudson/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'
+I, [2016-06-04T11:40:23.080140 #14631]  INFO -- : Refreshing Gem list
+F, [2016-06-04T11:40:24.619674 #14631] FATAL -- : error adding listener addr=/Users/fredhudson/Programming/Projects/Rails/depot/depot_deployment/depot_complete/shared/sockets/unicorn.sock
+ArgumentError: too long unix socket path (110bytes given but 104bytes max)
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/socket_helper.rb:122:in `initialize'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/socket_helper.rb:122:in `new'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/socket_helper.rb:122:in `bind_listen'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:231:in `listen'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:808:in `block in bind_new_listeners!'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:808:in `each'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:808:in `bind_new_listeners!'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:130:in `start'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/bin/unicorn:126:in `<top (required)>'
+  /Users/fredhudson/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /Users/fredhudson/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'
+I, [2016-06-04T11:40:55.063081 #15048]  INFO -- : Refreshing Gem list
+F, [2016-06-04T11:40:56.595392 #15048] FATAL -- : error adding listener addr=/Users/fredhudson/Programming/Projects/Rails/depot/depot_deployment/depot_complete/shared/sockets/unicorn.sock
+ArgumentError: too long unix socket path (110bytes given but 104bytes max)
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/socket_helper.rb:122:in `initialize'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/socket_helper.rb:122:in `new'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/socket_helper.rb:122:in `bind_listen'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:231:in `listen'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:808:in `block in bind_new_listeners!'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:808:in `each'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:808:in `bind_new_listeners!'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:130:in `start'
+  /Users/fredhudson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.1.0/bin/unicorn:126:in `<top (required)>'
+  /Users/fredhudson/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /Users/fredhudson/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'
